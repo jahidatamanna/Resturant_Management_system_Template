@@ -11,4 +11,4 @@ Using ( html,css,bootstrap nd javaScript)
 3. Menu -> Indian :add cart / clear cart
 3. Cart -> Apply Coupon -> Checkout -> Apply Coupon -> Customer 
 <br>
-###  Here is my live website  :   http://www.studywithtamanna.com 
+###  Here is my live website  :   https://resturant-management-system-demo.netlify.app/
