@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>JavaScript Shopping Cart Project Example</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+
+<!-------fontawesome-------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+	
+  
+      <style>
+          
+
+          /* fro other file */
+          body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.body{
+
+width:100%;
+overflow-x:hidden;
+
+}
+      
+      </style>
+  </head>
+  
+<body class="body">
+
+
+<!-- from other file -->
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h3 style="font-size:50px">Indian Food</h3> 
+    <a href="index.html" class="btn btn-warning text-light stretched-link">Back To Home</a>
+   <br><br>
+   <div class="m-5">
+   <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button>    <button class="clear-cart btn btn-warning">Clear Cart</button></div>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+
+
+
+      
+ <main>
+     <!-- Start DEMO HTML (Use the following code into your project)-->
+<!-- <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+    </div>
+</nav> -->
+
+<br>
+<div class="container ">
+<div class="row  ">
+    <div class="col-lg-5 col-sm-12 pt-4 m-2">
+            <!-- <label for="validationCustom04" class="form-label">Default Sorting</label> -->
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Default Sorting</option>
+              <option>Sort by popularity</option>
+              <option >Sort by latest</option>
+              <option>Sort by average rating</option>
+              <option>Sort by price : low to high</option>
+              <option>Sort by price : high to low </option>
+            </select>
+            <div class="invalid-feedback">
+            </div> 
+            <div class="col-lg-5 col-sm-12 pt-4 m-2"></div>
+          </div>     
+
+</div>
+<br>
+
+
+
+<!-- Main -->
+<div class="container">
+    <div class="row ">
+      
+      <div class="col-lg-4 col-sm-12 m-3 ">
+        <div class="card" style="width: 20rem;">
+          
+  <img class="card-img-top" src="./img/food1.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Food1</h4>
+    <p class="card-text">Price: 200 Tk</p>
+    <a href="#" data-name="Food1" data-price="200" class="add-to-cart btn btn-warning">Add to cart</a>
+  </div> 
+</div>
+ </div>
+
+      <div class="col-lg-4 col-sm-12 m-3">
+        <div class="card" style="width: 20rem;">
+
+  <img class="card-img-top" src="./img/food3.jpeg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Food2</h4>
+    <p class="card-text">Price: 250 Tk</p>
+    <a href="#" data-name="Food2" data-price="250" class="add-to-cart btn btn-warning">Add to cart</a>
+  </div>
+</div>
+</div>
+
+      <div class="col-lg-4 col-sm-12 m-3 ">
+        <div class="card" style="width: 20rem;">
+
+  <img class="card-img-top" src="./img/food2.webp" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Lemon</h4>
+    <p class="card-text">Price:180 Tk</p>
+    <a href="#" data-name="Food3" data-price="180" class="add-to-cart btn btn-warning text-white">Add to cart</a>
+  </div>
+</div> 
+</div>
+
+</div>
+</div>
+
+  
+ <!-- Modal -->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: Tk<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="Cart.html" class="btn btn-warning text-light stretched-link">Order Now</a>
+     </div>
+    </div>
+  </div>
+</div>
+     <!-- END EDMO HTML (Happy Coding!)-->
+
+     <div class="page ">
+    </div>
+    <div class="py-3" >
+      <ul class="pagination  justify-content-center   ">
+        <li class="page-item">  <a class="page-link " href ="#">Previous...</a></li>
+      <li class="page-item ">  <a class="page-link  " href ="#">1</a></li>
+      <li class="page-item">  <a class="page-link " href ="#">2</a></li>
+      <li class="page-item">  <a class="page-link " href ="#">3</a></li>
+    
+      <li class="page-item">  <a class="page-link " href ="#">Next..</a></li>
+      </ul>
+    </div>
+ </main>
+ 
+      
+  
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script  src="./js/script.js"></script>
+     
+  </body>
+</html>

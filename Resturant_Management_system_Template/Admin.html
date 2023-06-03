@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!----bootstrap 5 css-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-------fontawesome-------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<title>Admin</title>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #141414;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 26px;
+  cursor: pointer;
+  background-color: rgb(82, 83, 80);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.body{
+
+width:100%;
+overflow-x:hidden;
+
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+    <div class="hero-image">
+        <div class="hero-text">
+          <h3 style="font-size:50px">Admin</h3>
+          <a href="index.html" class="btn btn-warning text-light stretched-link">Back To Home</a>
+        </div>
+      </div>
+             
+
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">About Us</a>
+  <a href="#">Our Services</a>
+  <a href="#"> Order Details</a>
+  <a href="#">Table Number</a>
+  <a href="#">Delivery Man Update & Details</a>
+  <a href="#">Customers Details</a>
+  <a href="#">Employee Update</a>
+  <a href="#">Income Statement</a>
+  <a href="#">Add New Employee</a>
+  <a href="#">Available Food</a>
+  <a href="#">Sells Report</a>
+  <a href="#">Seetings</a>
+  
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+  
+<div class="">
+
+    <div class="row p-4">
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+  
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x  fa-solid fa-people-roof"></i>
+      </div>
+      
+      
+      <div class="card-body text-center ">
+        <h5 class="card-title "> <b>Customers order details </b></h5>
+        
+    </div>
+      <div class="pb-3 text-center text-light">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x fas fa-sharp fa-regular fa-table"></i>
+      </div>
+      <div class="card-body text-center text-dark">
+        <h5 class="card-title "><b>Table Number</b></h5>
+        
+    </div>
+      <div class="pb-3 text-center">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x fas fa-sharp fa-regular fa-person "></i>
+      </div>
+      <div class="card-body text-center text-dark">
+        <h5 class="card-title"><b>Delivery Man Update & Details</b></h5>
+        
+    </div>
+      <div class="pb-3 text-center">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+     
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x fas fa-sharp  	fas fa-hamburger"></i>
+      </div>
+  
+      <div class="card-body  text-center text-dark">
+        <h5 class="card-title"><b>Menu Update </b></h5>
+        
+    </div>
+      <div class="pb-3 text-center">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  <!-----------------card strt------->
+  
+  <!-----------------card strt------->
+  
+  <div class="">
+  
+    <div class="row my-3 p-4">
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+  
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x  fa-solid fa-people-roof"></i>
+      </div>
+      
+      
+      <div class="card-body text-center ">
+        <h5 class="card-title "> <b>Customers order details </b></h5>
+        
+    </div>
+      <div class="pb-3 text-center text-light">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x fas fa-sharp fa-regular fa-person "></i>
+        
+      </div>
+      <div class="card-body text-center text-dark">
+        <h5 class="card-title "><b>Employee Update</b></h5>
+        
+    </div>
+      <div class="pb-3 text-center">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+      <div class="box text-center   py-2 bg-warning">
+        <i  class=" text-white  rounded-circle fa-2x fas fa-sharp fa-regular fa-building-columns "></i>
+        
+      </div>
+      <div class="card-body text-center text-dark">
+        <h5 class="card-title"><b>Income Statement</b></h5>
+        
+    </div>
+      <div class="pb-3 text-center">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-lg-3 col-sd-6">
+    <div class="card h-100">
+     
+      <div class="box text-center   py-2 bg-warning">
+        
+        <i  class=" text-white  rounded-circle fa-2x fas fa-sharp fa-regular fa-person-dress "></i>
+      
+      </div>
+  
+      <div class="card-body  text-center text-dark">
+        <h5 class="card-title"><b>Add New Employee </b></h5>
+        
+    </div>
+      <div class="pb-3 text-center">
+        <button type="button" class="btn btn-warning text-light">See More</button>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+ 
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+ 
+
+
+
+<!-------------footer start--------->
+<footer>
+
+  <div class ="row  bg-warning text-center py-4 text-light"> 
+    <div class="col-12 my-auto">
+       
+      <img src="https://img.freepik.com/premium-vector/restaurant-logo-design-template_79169-56.jpg" class="rounded-circle" alt="Cinque Terre" width="100" height="100"><h4>Visit our exclusive restaurent for once then it will be your regular destination for party and celebration. </h4>          
+      <p><i class="fa-solid fa-location-dot  "></i>&nbsp;408/1, Banasree, Rampura, Dhaka 1219, Bangladesh</p>
+      <p>  <i class="fa-solid fa-envelope"></i>&nbsp; cgprincipal@ymail.com </p>
+      <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;02-9666058 </p>
+      <div class="icon" style="font-size:30px;color:rgb(244, 253, 245) ">
+        <i class="fa fa-facebook-square " >&nbsp;</i>
+        <i class="fa fa-linkedin" >&nbsp;</i>
+        <i class="fa fa-twitter" >&nbsp;</i>
+        <i class="fa fa-youtube-square">&nbsp;</i>
+        <i class="fa fa-instagram" >&nbsp;</i>
+      </div>
+    </div>
+
+  </div> 
+</footer>
+<!-------------footer end--------->
+</body>
+</html> 
